@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.related {
+    background-image: url(../images/common/section_bg.jpg);
+    background-size: cover;
+}
+
+.related-inner {
+    padding:rem(70) rem(40) rem(90) rem(40);
+    @include mq(md) {
+        max-width: rem(1236);
+        margin-left: auto;
+        margin-right: auto;
+        padding:rem(50) rem(20) rem(100) rem(20);
+    }
+}
+
+.related-cards {
+    @include mq(md) {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: rem(75);
+    }
+}
+
+.related-card {
+    position: relative;
+    &:nth-child(n+2) {
+        margin-top: rem(40);
+        @include mq(md) {
+            margin-top: initial;
+        }
+    }
+}
+
+.related-image {
+    @include mq(md) {
+        aspect-ratio: 350/200;
+    }
+}
+
+.related-title {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    background-color: $black;
+    color: $white;
+    text-align: center;
+    padding:rem(10) 0;
+    display: block;
+    width: 100%;
+    font-size: rem(16);
+    font-weight: $bold;
+    @include mq(md) {
+        font-size: rem(20);
+        font-weight: $medium;
+        padding:rem(7.5) 0;
+    }
+}

@@ -1,0 +1,103 @@
+@use "sass:math";
+
+////////////////////
+// インナー幅設定
+////////////////////
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1000px;
+// ※キャンパス幅ではなくインナーの幅を指す
+
+// 余白
+$padding-pc: 20px;
+$padding-sp: 15px;
+
+
+////////////////////
+// フォント設定
+////////////////////
+
+$base:'Noto Sans JP', sans-serif;
+$accent:'Zen Old Mincho', serif;
+$number:'Noto Sans', sans-serif;
+
+// フォントウェイト
+$regular: 400;
+$medium: 500;
+$semibold:600;
+$bold: 700;
+
+////////////////////
+// 色の指定
+////////////////////
+
+$black: #232222;
+$white: #fff;
+$red:#C30005;
+$orange:#CC5000;
+
+body {
+  font-family: $base;
+  font-weight: $regular;
+  color: $black;
+}
+
+html {
+  font-family: $base;
+}
+
+////////////////////
+// メディアクエリとブレークポイントの設定
+////////////////////
+
+//ブレイクポイント
+$breakpoints: (
+  sm: 600,
+  md: 768,
+  lg: 1240,
+  xl: 1440,
+);
+
+
+//メディアクエリー
+$mediaquerys: (
+  sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
+  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+);
+
+// @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+// remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}
+
+
+////////////////////
+// 非表示設定
+////////////////////
+
+//768px以上を表示
+.u-desktop {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+//モバイルのみ表示
+.u-mobile {
+  @include mq("md") {
+    display: none;
+  }
+}
+
+select {
+  color: $black;
+}

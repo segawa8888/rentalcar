@@ -1,0 +1,163 @@
+@use "global" as *;
+
+.date__wrap {
+    @include mq(md) {
+        display: flex;
+        justify-content: space-between;
+    }
+    span {
+        font-size: rem(14);
+        font-weight:$semibold;
+        color: #393939;
+    }
+
+    .date {
+        max-width: 100%;
+        width: 100%;
+        @include mq(md) {
+            max-width: rem(190);
+        }
+
+        &:last-child {
+            position: relative;
+            margin-top: rem(15);
+            @include mq(md) {
+                margin-top: initial;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                left:rem(-23);
+                top:rem(50);
+                background-color: #B1B1B1;
+                height:1px;
+                max-width: 14px;
+                width: 100%;
+            }
+        }
+
+        .select {
+            font-size: rem(15);
+            font-weight:$regular;
+            display: flex;
+            margin-top: rem(5);
+            background-color: $white;
+                .timepicker {
+                    cursor: pointer;
+                    appearance: none;
+                    border-top:rem(1) solid #B1B1B1;
+                    border-left:rem(1) solid #B1B1B1;
+                    border-bottom: rem(1) solid #B1B1B1;
+                    border-radius: rem(5) 0 0 rem(5);
+                    padding:rem(8.5) rem(15);
+                    width: 25%;
+                    text-align: center;
+                   @include mq(md) {
+                    width:36%;
+                   }
+                   &:focus {
+                    border-color: $red;
+                }
+                }
+                .datepicker {
+                    width: 75%;
+                    padding-left: rem(15);
+                    cursor: pointer;
+                    @include mq(md) {
+                        width:64%;
+                    }
+                    background-image: url(../images/common/angle-dawn_gray.png);
+                    background-position: right rem(10) center;
+                    background-repeat: no-repeat;
+                    background-size: rem(10) rem(4);
+                    border:rem(1) solid #B1B1B1;
+                    border-radius: 0 rem(5) rem(5) 0;
+                    &:focus {
+                        border-color: $red;
+                    }
+                    &:focus {
+                        border-color: $red;
+                    }
+                }
+        }
+    }
+}
+
+.type__wrap {
+    @include mq(md) {
+        max-width: rem(412);
+        width: 100%;
+    }
+    span {
+        font-size: rem(14);
+        font-weight:$semibold;
+        color: #393939;
+    }
+
+    .select {
+        font-size: rem(15);
+        font-weight:$regular;
+        display: flex;
+        margin-top: rem(5);
+        background-color: $white;
+        select {
+            appearance: none;
+            border-top:rem(1) solid #B1B1B1;
+            border-left:rem(1) solid #B1B1B1;
+            border-bottom: rem(1) solid #B1B1B1;
+            border-radius: rem(5) 0 0 rem(5);
+            padding:rem(8.5) rem(15);
+            width: 100%;
+            &:focus {
+                border-color: $red;
+            }
+            &:last-child {
+                background-image: url(../images/common/angle-dawn_gray.png);
+                background-position: right 10px center;
+                background-repeat: no-repeat;
+                background-size: 14.77px 8.05px;
+                border-right:rem(1) solid #B1B1B1;
+                border-left:rem(1) solid #B1B1B1;
+                border-radius: 0 rem(5) rem(5) 0;
+                &:focus {
+                    border-color: $red;
+                }
+            }
+        }
+        select::-ms-expand {
+            display: none; /* デフォルトの矢印を非表示(IE用) */
+          }
+    }
+}
+
+.search__btn {
+    max-width: 100%;
+    width: 100%;
+    background-color: $red;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:rem(55);
+    border-radius: rem(10);
+    font-size: rem(18);
+    font-weight: $semibold;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+    padding: 0.4em !important;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: none!important;
+    background: none !important;
+    color: #8A9099!important;
+    text-align: center!important;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    background: $red!important;
+    color: $white!important;
+    border:none!important;
+    border-radius: rem(10);
+}

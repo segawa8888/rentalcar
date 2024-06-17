@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.section-title {
+    position: relative;
+    font-size: rem(24);
+    line-height: calc(36 / 24);
+    font-weight:$bold;
+    font-family: $accent;
+    color: $white;
+    padding-left: rem(40);
+    padding-top: rem(30);
+    @include mq(md) {
+        font-size: rem(44);
+        line-height: calc(66 / 44);
+        padding-left: rem(120);
+        padding-top: rem(50);
+    }
+}
+
+.section-title img {
+    width: rem(240);
+    height: rem(240);
+    position: absolute;
+    top:rem(-30);
+    left: 0;
+    z-index: -1;
+    @include mq(md) {
+        width: rem(490);
+        height:rem(450);
+        top:rem(-50);
+    }
+}
+
+.section-sub__title {
+    padding-top: rem(30);
+    font-size: rem(24);
+    font-weight:$bold;
+    font-family: $accent;
+    @include mq(md) {
+        padding-top: rem(50);
+        font-size: rem(40);
+    }
+}

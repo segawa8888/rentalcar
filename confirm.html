@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <title>template</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- ファビコン -->
+  <link rel="icon" href="/images/common/favicon.ico" />
+  <!-- css -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Zen+Old+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./js/script.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <img src="./images/common/logo.png" alt="Speedy Rental Car">
+      </div>
+      <ul class="header-nav header__nav">
+        <li class="header-nav__item">
+          <a href="">引き渡し場所</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="">ご利用ガイド</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="">料金・車種</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="">Q＆A</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="">保険</a>
+        </li>
+      </ul>
+      <div class="header-contact">
+        <a href="">予約確認・変更</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="under-section__container">
+      <div class="under-section__wrapper">
+        <div class="under-section__inner">
+          <div class="under-section__content">
+            <ul class="under-section__nav">
+              <li><span class="step">STEP</span> 01<br class="u-desktop"><span>日時・車選択</span></li>
+              <li><span class="step">STEP</span> 02<br><span>予約内容入力</span></li>
+              <li><span class="step">STEP</span> 03<br class="u-desktop"><span>お客様情報登録</span></li>
+              <li class="active"><span class="step">STEP</span> 04<br class="u-desktop"><span>最終確認</span></li>
+              <li><span class="step">STEP</span> 05<br class="u-desktop"><span>予約完了</span></li>
+              <li><span class="step">STEP</span> 06<br class="u-desktop"><span>お支払い</span></li>
+            </ul>
+            <h2 class="under-section-title">最終確認</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="under-section-sub__wrapper">
+      <div class="under-section-sub__inner">
+        <h2 class="under-section-sub-title">お客様情報の確認</h2>
+      </div>
+    </div>
+
+    <div class="form-container confirm">
+      <div class="form-wrapper">
+        <div class="form-inner">
+          <div class="form-content">
+            <div class="form-confirm">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>お名前</th>
+                    <td>RENTAL TARO</td>
+                  </tr>
+                  <tr>
+                    <th>メールアドレス</th>
+                    <td>sample@speedyrentalcar.com</td>
+                  </tr>
+                  <tr>
+                    <th>国籍</th>
+                    <td>中国</td>
+                  </tr>
+                  <tr>
+                    <th>電話番号</th>
+                    <td>xxxxxxxxxxxxxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                    <th>運転免許証</th>
+                    <td>持っている</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <a href="" class="btn">予約を確定する</a>
+            </div>
+            <a href="" class="form-prev">前画面に戻る</a>
+          </div>
+          <aside class="form-side__menu">
+            <h3 class="form-side__title">ご予約内容</h3>
+            <div class="form-side__items">
+              <div class="form-side__item">
+                <div class="form-side__wrap">
+                  <div class="form-side__info">
+                    <p>
+                      <span>車種</span>アルファード
+                    <p>
+                      <span>出発日時</span>2023/10/10  10:00
+                    </p>
+                    <p>
+                      <span>返却日時</span>2023/10/11  10:00
+                    </p>
+                  </div>
+                  <div class="form-side__box">
+                      <div class="form-side__image">
+                        <img src="./images/form/alphard.jpg" alt="alphard">
+                      </div>
+                      <a href="" class="form-side__link">日時・車種を変更する</a>
+                  </div>
+                </div>
+              </div>
+              <div class="form-side__item">
+                <div class="form-side__price">
+                  <div class="price">
+                    <span>レンタル料金</span>
+                   <p><span>6時間</span><span>6,000円</span></p>
+                  </div>
+                  <div class="price">
+                    <span>チャイルドシート</span>
+                   <p><span>ベビーシートA (1)</span><span>2,000円</span></p>
+                   <p><span>チャイルドシートB (2)</span><span>2,000円</span></p>
+                  </div>
+                  <div class="price">
+                    <span>保険</span>
+                   <p><span>商品A</span><span>3,000円</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-side__item">
+                <div class="form-side__price">
+                  <div class="price">
+                   <p><span>合計</span><span>13,000円</span></p>
+                  </div>
+                </div>
+                <!-- <a href="" class="btn">お客様情報入力へ進む</a> -->
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__inner">
+        <div class="footer__content">
+          <div class="footer__logo">
+            <picture>
+              <source srcset="./images/common/logo-white.png" media="(min-width:768px)"/>
+              <img src="./images/common/logo-white-sp.png" alt="logo">
+            </picture>
+          </div>
+          <ul class="footer__nav">
+            <li><a href="">営業所のご案内</a></li>
+            <li><a href="">ご利用ガイド</a></li>
+            <li><a href="">保険制度</a></li>
+            <li><a href="">Q&A</a></li>
+            <li><a href="">ご予約</a></li>
+          </ul>
+        </div>
+        <p class="footer__copy">Copyright@XXXXXXXX All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- <h2 class="section-title">車種・料金
+    <img src="./images/common/section-title_back.jpg" alt="木目柄">
+  </h2> -->
+</body>
+</html>

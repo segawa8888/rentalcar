@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <title>template</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- ファビコン -->
+  <link rel="icon" href="/images/common/favicon.ico" />
+  <!-- css -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jonthornton/jquery-timepicker/3e0b283a/jquery.timepicker.min.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/blitzer/jquery-ui.css">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Zen+Old+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdn.rawgit.com/jonthornton/jquery-timepicker/3e0b283a/jquery.timepicker.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+  <script defer src="./js/script.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <img src="./images/common/logo.png" alt="Speedy Rental Car">
+      </div>
+      <ul class="header-nav header__nav">
+        <li class="header-nav__item">
+          <a href="">引き渡し場所</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="">ご利用ガイド</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="">料金・車種</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="">Q＆A</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="">保険</a>
+        </li>
+      </ul>
+      <div class="header-contact">
+        <a href="">予約確認・変更</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main top__main">
+    <div class="fv js-target">
+      <div class="fv__wrapper">
+        <div class="fv__inner">
+          <div class="fv__contents">
+            <h2 class="fv__title">
+              <span>８人乗りの高級車で</span><br>
+              プレミアムな体験を
+            </h2>
+            <div class="fv__image u-mobile">
+              <img src="./images/top/fv_sp.png" alt="8人乗りの高級車でプレミアムな体験を">
+            </div>
+            <div class="fv__content">
+              <h3 class="">レンタカー予約</h3>
+              <div class="search__wrap">
+                <div class="date__wrap">
+                  <div class="date">
+                    <span>出発日時</span>
+                    <div class="select">
+                      <input type="text" class="timepicker time01" placeholder="10:00" data-time-format="H:i"/>
+                        <input type="text" id="date01" class="datepicker" placeholder="12.07.2020"/>
+                    </div>
+                  </div>
+                  <div class="date">
+                    <span>返却日時</span>
+                    <div class="select">
+                      <input type="text" class="timepicker time02" placeholder="10:00" data-time-format="H:i"/>
+                        <input type="text" id="date02" class="datepicker" placeholder="12.07.2020"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="type__wrap">
+                  <span>車種</span>
+                  <div class="select">
+                    <select name="type">
+                      <option value="" disabled selected style="display:none;">車種</option>
+                      <option value="どちらでもよい">どちらでもよい</option>
+                      <option value="type1">type1</option>
+                      <option value="type2">type2</option>
+                      <option value="type3">type3</option>
+                      </select>
+                  </div>
+                </div>
+                <div class="place__wrap">
+                  <span>受け渡し場所</span>
+                  <p>成田国際空港</p>
+                </div>
+                <a href="" class="search__btn">Search</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="feature top__feature">
+      <div class="feature__inner">
+        <h2 class="section-feature__title js-target">Speedy Rental Car<span>が選ばれる理由</span></h2>
+        <div class="feature__content">
+          <div class="feature__items">
+            <div class="feature__item js-target">
+              <div class="feature__icon u-desktop">
+                <img src="./images/common/car-insurance.png" alt="安心の保険制度">
+              </div>
+              <div class="feature__wrap">
+                <p class="feature__title">(仮)安心の保険制度</p>
+                <div class="feature__icon u-mobile">
+                  <img src="./images/common/car-insurance.png" alt="安心の保険制度">
+                </div>
+                <p class="feature__text">全ての車種・プランで、保険・補償がかけられていますので、万が一の際も安心です。（仮）</p>
+              </div>
+            </div>
+            <div class="feature__item js-target">
+              <div class="feature__icon u-desktop">
+                <img src="./images/common/car-child-seat.png" alt="(仮)チャイルドシート無料">
+              </div>
+              <div class="feature__wrap">
+                <p class="feature__title">(仮)チャイルドシート無料</p>
+                <div class="feature__icon u-mobile">
+                  <img src="./images/common/car-child-seat.png" alt="(仮)チャイルドシート無料">
+                </div>
+                <p class="feature__text">全ての車種・プランで、保険・補償がかけられていますので、万が一の際も安心です。（仮）</p>
+              </div>
+            </div>
+            <div class="feature__item js-target">
+              <div class="feature__icon u-desktop">
+                <img src="./images/common/healthicons_truck-driver.png" alt="(仮)チャイルドシート無料">
+              </div>
+              <div class="feature__wrap">
+                <p class="feature__title">(仮)追加ドライバー無料</p>
+                <div class="feature__icon u-mobile">
+                  <img src="./images/common/healthicons_truck-driver.png" alt="(仮)チャイルドシート無料">
+                </div>
+                <p class="feature__text">全ての車種・プランで、保険・補償がかけられていますので、万が一の際も安心です。（仮）</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="price top__price">
+      <h2 class="section-title js-target">車種・料金
+        <img src="./images/common/section-title_back.jpg" alt="木目柄">
+      </h2>
+      <div class="price__wrapper">
+        <div class="price__back">
+            <img src="./images/top/bg_gd.png" alt="gold">
+        </div>
+        <div class="price__inner">
+          <div class="price__content">
+            <div class="price__items">
+              <div class="price__item js-target">
+                <h3 class="price__title">
+                  アルファード<span>トヨタ</span>
+                </h3>
+                <div class="price__desc">
+                  <div class="desc__info">
+                    <div class="desc">
+                      <span>定員数</span>
+                      <p>8名</p>
+                    </div>
+                    <div class="desc">
+                      <span>タイプ</span>
+                      <p>AT  /  禁煙</p>
+                    </div>
+                    <div class="desc">
+                      <span>標準装備</span>
+                      <p>カーナビ / ETC車載器</p>
+                    </div>
+                  </div>
+                  <div class="desc__icon">
+                    <div class="icon">
+                      <span><img src="./images/common/etc.png" alt="etc"></span>
+                      <p>ETC車載器</p>
+                    </div>
+                    <div class="icon">
+                      <span><img src="./images/common/gps.png" alt="gps"></span>
+                      <p>カーナビ</p>
+                    </div>
+                    <div class="icon">
+                      <span><img src="./images/common/smoke.png" alt="smoke"></span>
+                      <p>禁煙</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price__image">
+                  <img src="./images/common/alphard.png" alt="アルファード">
+                </div>
+                <p class="price__basic">
+                  基本料金<span>(6時間)<strong>6,000円〜</strong></span>
+                </p>
+                <a href="" class="price__btn btn">この車種で予約する</a>
+              </div>
+              <div class="price__item js-target">
+                <h3 class="price__title">
+                  ヴェルファイア<span>トヨタ</span>
+                </h3>
+                <div class="price__desc">
+                  <div class="desc__info">
+                    <div class="desc">
+                      <span>定員数</span>
+                      <p>8名</p>
+                    </div>
+                    <div class="desc">
+                      <span>タイプ</span>
+                      <p>AT  /  禁煙</p>
+                    </div>
+                    <div class="desc">
+                      <span>標準装備</span>
+                      <p>カーナビ / ETC車載器</p>
+                    </div>
+                  </div>
+                  <div class="desc__icon">
+                    <div class="icon">
+                      <span><img src="./images/common/etc.png" alt="etc"></span>
+                      <p>ETC車載器</p>
+                    </div>
+                    <div class="icon">
+                      <span><img src="./images/common/gps.png" alt="gps"></span>
+                      <p>カーナビ</p>
+                    </div>
+                    <div class="icon">
+                      <span><img src="./images/common/smoke.png" alt="smoke"></span>
+                      <p>禁煙</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price__image">
+                  <img src="./images/common/vellfire_navy.png" alt="アルファード">
+                </div>
+                <p class="price__basic">
+                  基本料金<span>(6時間)<strong>6,000円〜</strong></span>
+                </p>
+                <a href="" class="price__btn btn">この車種で予約する</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="guide top__guide">
+      <div class="guide__wrapper">
+        <div class="guide__inner">
+          <h2 class="section-sub__title js-target">レンタカーガイド</h2>
+          <div class="guide__content">
+            <div class="guide__items">
+              <div class="guide__item js-target">
+                <a href="">
+                  <div class="guide__image">
+                    <img src="./images/top/guide01.jpg" alt="guide">
+                  </div>
+                  <div class="guide__wrap">
+                    <p class="guide__title">ご利用ステップ</p>
+                    <p class="guide__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    <span class="guide__arrow"><img src="./images/common/red_arrow.png" alt="arrow"></span>
+                  </div>
+                </a>
+              </div>
+              <div class="guide__item js-target">
+                <a href="">
+                  <div class="guide__image">
+                    <img src="./images/top/guide02.jpg" alt="guide">
+                  </div>
+                  <div class="guide__wrap">
+                    <p class="guide__title">日本の運転ルール</p>
+                    <p class="guide__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    <span class="guide__arrow"><img src="./images/common/red_arrow.png" alt="arrow"></span>
+                  </div>
+                </a>
+              </div>
+              <div class="guide__item js-target">
+                <a href="">
+                  <div class="guide__image">
+                    <img src="./images/top/guide01.jpg" alt="guide">
+                  </div>
+                  <div class="guide__wrap">
+                    <p class="guide__title">自動車保険</p>
+                    <p class="guide__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    <span class="guide__arrow"><img src="./images/common/red_arrow.png" alt="arrow"></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pay top__pay">
+      <div class="pay__wrapper">
+        <div class="pay__inner">
+          <h2 class="section-sub__title js-target">お支払い方法</h2>
+          <div class="pay__content js-target">
+            <p class="pay__text">下記の各種決済サービスがご利用いただけます。<br class="u-desktop">
+              レンタカーご利用前の事前決済で、出発時は手続きの手間がかからずスピーディーに出発できます。</p>
+              <div class="pay__items">
+                <div class="pay__item js-target">
+                  <span>モバイル決済サービス</span>
+                  <div class="pay__wrap">
+                    <div class="pay__image">
+                      <img src="./images/common/alipay.png" alt="alipay">
+                    </div>
+                    <div class="pay__image">
+                      <img src="./images/common/wechatpay.png" alt="wechatpay">
+                    </div>
+                    <div class="pay__image">
+                      <img src="./images/common/unionpay.png" alt="unionpay">
+                    </div>
+                    <div class="pay__image">
+                      <img src="./images/common/dpay.png" alt="dpay">
+                    </div>
+                    <div class="pay__image">
+                      <img src="./images/common/coin.png" alt="coin">
+                    </div>
+                    <div class="pay__image">
+                      <img src="./images/common/paypay.png" alt="paypay">
+                    </div>
+                    <div class="pay__image">
+                      <img src="./images/common/alipay.png" alt="alipay">
+                    </div>
+                    <div class="pay__image">
+                      <img src="./images/common/wechatpay.png" alt="wechatpay">
+                    </div>
+                  </div>
+                </div>
+                <div class="pay__item js-target">
+                  <span>クレジットカード</span>
+                  <div class="pay__wrap">
+                    <div class="pay__image">
+                      <img src="./images/common/visa.png" alt="visa">
+                    </div>
+                    <div class="pay__image">
+                      <img src="./images/common/mastercard.png" alt="mastercard">
+                    </div>
+                    <div class="pay__image">
+                      <img src="./images/common/jcb.png" alt="jcb">
+                    </div>
+                    <div class="pay__image">
+                      <img src="./images/common/americanexpress.png" alt="americanexpress">
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="place top__place">
+      <h2 class="section-title js-target">お引き渡し場所
+        <img src="./images/common/section-title_back.jpg" alt="木目柄">
+      </h2>
+      <div class="place__wrapper">
+        <div class="place__back">
+          <img src="./images/top/bg_gd02.png" alt="gold">
+        </div>
+        <div class="place__inner">
+          <div class="place__content js-target">
+            <h3 class="section-place__title">成田国際空港営業所</h3>
+            <div class="place__items">
+              <div class="place__table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>営業時間</th>
+                      <td>XX:XX - XX:XX</td>
+                    </tr>
+                    <tr>
+                      <th>住　　所</th>
+                      <td>千葉県成田市<br class="u-mobile">XXXXXXXXXXXXXXXXX<br class="u-mobile">XXXXXXXXXXX</td>
+                    </tr>
+                    <tr>
+                      <th>アクセス</th>
+                      <td>（空港からのアクセス方法説明テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト）</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="place__image">
+                <img src="./images/top/map01.jpg" alt="place">
+              </div>
+            </div>
+            <div class="place__map js-target">
+              <p class="place__map__title">
+                <span><img src="./images/common/icon_map.png" alt="map"></span>Map
+              </p>
+              <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7477988419746!2d139.74285797630372!3d35.658584831216864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1696905485160!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__inner">
+        <div class="footer__content">
+          <div class="footer__logo">
+            <picture>
+              <source srcset="./images/common/logo-white.png" media="(min-width:768px)"/>
+              <img src="./images/common/logo-white-sp.png" alt="logo">
+            </picture>
+          </div>
+          <ul class="footer__nav">
+            <li><a href="">営業所のご案内</a></li>
+            <li><a href="">ご利用ガイド</a></li>
+            <li><a href="">保険制度</a></li>
+            <li><a href="">Q&A</a></li>
+            <li><a href="">ご予約</a></li>
+          </ul>
+        </div>
+        <p class="footer__copy">Copyright@XXXXXXXX All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

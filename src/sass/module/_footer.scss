@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.footer {
+    background-color: #0D0D0D;
+    color:$white;
+}
+
+.footer__inner {
+    padding:rem(26) rem(20) rem(5) rem(20);
+    @include mq(md) {
+       max-width: rem(1240);
+       margin-left: auto;
+       margin-right: auto;
+       padding:rem(29) rem(20) rem(12) rem(20);
+    }
+}
+
+.footer__content {
+    padding:0 rem(20);
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+        padding:initial;
+    }
+}
+
+.footer__logo {
+    max-width: rem(97);
+    @include mq(md) {
+        max-width: rem(116);
+    }
+}
+
+.footer__nav {
+    margin-top: rem(20);
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: rem(48);
+    grid-template-rows: repeat(3,1fr);
+    row-gap: rem(7);
+    max-width: rem(217);
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+        column-gap:initial;
+        row-gap: initial;
+        max-width: initial;
+        margin-left: rem(179);
+    }
+    li {
+        a {
+            font-size: rem(12);
+            font-weight:$medium;
+            @include mq(md) {
+                font-size: rem(16);
+                font-weight:$semibold;
+            }
+        }
+        &:nth-child(n+2) {
+            @include mq(md) {
+                margin-left: rem(60);
+            }
+        }
+    }
+}
+
+.footer__copy {
+    margin-top: rem(40);
+    font-size: rem(10);
+    @include mq(md) {
+        font-size: rem(12);
+        margin-top: rem(75);
+    }
+}

@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.top__pay {
+    margin-top: rem(60);
+    padding-top: rem(40);
+    background-color:rgba(249,227,179,0.3);
+    padding-bottom: rem(40);
+    @include mq(md) {
+        margin-top: rem(150);
+        padding-top: rem(90);
+        padding-bottom: rem(90);
+    }
+}
+
+.pay__wrapper {
+    padding-left: rem(20);
+    padding-right: rem(20);
+    background-color: $white;
+    margin-left: rem(20);
+    margin-right: rem(20);
+    @include mq(md) {
+        max-width: rem(1140);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.pay__inner {
+    padding-left: rem(20);
+    padding-right: rem(20);
+    padding-bottom: rem(30);
+    @include mq(md) {
+        padding-left: rem(50);
+        padding-right: rem(50);
+        padding-bottom: rem(70);
+    }
+}
+
+.pay__text {
+    margin-top: rem(20);
+    font-size: rem(14);
+    line-height: calc(21 / 14);
+    @include mq(md) {
+        margin-top: rem(30);
+        font-size: rem(18);
+        line-height: calc(27 / 18);
+    }
+}
+
+.pay__items {
+    margin-top: rem(30);
+}
+
+.pay__item {
+    padding-top: rem(10);
+    border-top:rem(1) solid $orange;
+    @include mq(md) {
+        padding-top: rem(10);
+    }
+    &:nth-child(n+2) {
+        margin-top: rem(20);
+        @include mq(md) {
+            margin-top: rem(50);
+        }
+    }
+    span {
+        display: block;
+        color: $orange;
+        font-size: rem(14);
+        font-weight: $bold;
+        @include mq(md) {
+            font-size: rem(16);
+        }
+    }
+}
+
+.pay__wrap {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: rem(35);
+    grid-template-rows: repeat(3,1fr);
+    row-gap: rem(5);
+    margin-top: rem(5);
+    @include mq(md) {
+        grid-template-columns: repeat(6,1fr);
+        column-gap: rem(56);
+        grid-template-rows: repeat(2,1fr);
+        row-gap: rem(20);
+        margin-top: rem(20);
+    }
+}

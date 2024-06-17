@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <title>template</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- ファビコン -->
+  <link rel="icon" href="/images/common/favicon.ico" />
+  <!-- css -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Zen+Old+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./js/script.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <img src="./images/common/logo.png" alt="Speedy Rental Car">
+      </div>
+      <ul class="header-nav header__nav">
+        <li class="header-nav__item">
+          <a href="">引き渡し場所</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="">ご利用ガイド</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="">料金・車種</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="">Q＆A</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="">保険</a>
+        </li>
+      </ul>
+      <div class="header-contact">
+        <a href="">予約確認・変更</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="under-section__container">
+      <div class="under-section__wrapper">
+        <div class="under-section__inner">
+          <div class="under-section__content">
+            <ul class="under-section__nav">
+              <li><span class="step">STEP</span> 01<br class="u-desktop"><span>日時・車選択</span></li>
+              <li class="active"><span class="step">STEP</span> 02<br><span>予約内容入力</span></li>
+              <li><span class="step">STEP</span> 03<br class="u-desktop"><span>お客様情報登録</span></li>
+              <li><span class="step">STEP</span> 04<br class="u-desktop"><span>最終確認</span></li>
+              <li><span class="step">STEP</span> 05<br class="u-desktop"><span>予約完了</span></li>
+              <li><span class="step">STEP</span> 06<br class="u-desktop"><span>お支払い</span></li>
+            </ul>
+            <h2 class="under-section-title">予約内容入力</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="under-section-sub__wrapper">
+      <div class="under-section-sub__inner">
+        <h2 class="under-section-sub-title">レンタカー予約内容の入力</h2>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <div class="form-wrapper">
+        <div class="form-inner">
+          <div class="form-content">
+            <div class="form-item">
+              <div class="form-item__wrap">
+                <div class="form-item__box">
+                  <p class="form-item__title">乗車人数<br><span class="required">必須</span></p>
+                </div>
+                <div class="form-item__table">
+                  <table id="count" class="count">
+                    <tr>
+                      <th>大人 (12歳以上)</th>
+                      <td class="form-item__count">
+                        <button class="minus"><img src="./images/form/minus.png" alt=""></button>
+                        <input type="text" name="input01" value="0" readonly class="number">
+                        <button class="plus"><img src="./images/form/plus.png" alt=""></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>子供A (7歳以上)</th>
+                      <td class="form-item__count">
+                        <button class="minus"><img src="./images/form/minus.png" alt=""></button>
+                        <input type="text" name="input02" value="0" readonly class="number">
+                        <button class="plus"><img src="./images/form/plus.png" alt=""></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>子供B (3〜6歳)</th>
+                      <td class="form-item__count">
+                        <button class="minus"><img src="./images/form/minus.png" alt=""></button>
+                        <input type="text" name="input03" value="0" readonly class="number">
+                        <button class="plus"><img src="./images/form/plus.png" alt=""></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>乳幼児 (0〜3歳)</th>
+                      <td class="form-item__count">
+                        <button class="minus"><img src="./images/form/minus.png" alt=""></button>
+                        <input type="text" name="input04" value="0" readonly class="number">
+                        <button class="plus"><img src="./images/form/plus.png" alt=""></button>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="form-item__wrap">
+                <div class="form-item__box">
+                  <p class="form-item__title">乗車人数<br><span class="required">必須</span></p>
+                  <p class="form-item__text">6歳未満のお子様にはチャイルドシートの着用が義務付けられています。</p>
+                  <p class="form-item__text">チャイルドシートの適用年齢は目安です。お子様の身長、体重に合わせてお選びください。️</p>
+                </div>
+                <div class="form-item__table">
+                  <table id="count" class="count">
+                    <tr>
+                      <th>ベビーシートA<br><span>(生後9ヶ月位まで)</span></th>
+                      <td class="form-item__count">
+                        <button class="minus"><img src="./images/form/minus.png" alt=""></button>
+                        <input type="text" name="input05" value="0" readonly class="number">
+                        <button class="plus"><img src="./images/form/plus.png" alt=""></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>チャイルドシートB<br><span>(生後9ヶ月〜4歳位まで)</span></th>
+                      <td class="form-item__count">
+                        <button class="minus"><img src="./images/form/minus.png" alt=""></button>
+                       <input type="text" name="input06" value="0" readonly class="number">
+                       <button class="plus"><img src="./images/form/plus.png" alt=""></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>ジュニアシートC<br><span>(4歳〜10歳位まで)</span></th>
+                      <td class="form-item__count">
+                        <button class="minus"><img src="./images/form/minus.png" alt=""></button>
+                        <input type="text" name="input07" value="0" readonly class="number">
+                        <button class="plus"><img src="./images/form/plus.png" alt=""></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="Chkbox">
+                          <input name="checkbox" class="Chkbox-Input" type="checkbox">
+                          <span class="Chkbox-Text">チャイルドシート不要</span>
+                        </label>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="form-item__wrap">
+                <div class="form-item__box">
+                  <p class="form-item__title">その他オプション</p>
+                </div>
+                <div class="form-item__table">
+                  <table id="count" class="count">
+                    <tr>
+                      <th>商品A<br><span>(生後9ヶ月位まで)</span></th>
+                      <td class="form-item__count">
+                        <button class="minus"><img src="./images/form/minus.png" alt=""></button>
+                        <input type="text" name="input08" value="0" readonly class="number">
+                        <button class="plus"><img src="./images/form/plus.png" alt=""></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>チャイルドシートB<br><span>(生後9ヶ月〜4歳位まで)</span></th>
+                      <td class="form-item__count">
+                        <button class="minus"><img src="./images/form/minus.png" alt=""></button>
+                        <input type="text" name="input09" value="0" readonly class="number">
+                        <button class="plus"><img src="./images/form/plus.png" alt=""></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>ジュニアシートC<br><span>(4歳〜10歳位まで)</span></th>
+                      <td class="form-item__count">
+                        <button class="minus"><img src="./images/form/minus.png" alt=""></button>
+                        <input type="text" name="input10" value="0" readonly class="number">
+                        <button class="plus"><img src="./images/form/plus.png" alt=""></button>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="form-item__wrap">
+                <div class="form-item__box">
+                  <p class="form-item__title">保険<br><span class="required">必須</span></p>
+                </div>
+                <div class="form-item__table">
+                  <table>
+                    <tr>
+                      <td>
+                        <label class="Radio">
+                          <input name="radio" class="Radio-Input" type="radio">
+                          <span class="Radio-Text">商品A<small>保険の概要が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</small></span>
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="Radio">
+                          <input name="radio" class="Radio-Input" type="radio">
+                          <span class="Radio-Text">商品B<small>保険の概要が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</small></span>
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="Radio">
+                          <input name="radio" class="Radio-Input" type="radio">
+                          <span class="Radio-Text">保険に加入しない</span>
+                        </label>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <a href="" class="btn">お客様情報入力へ進む</a>
+            </div>
+          </div>
+          <aside class="form-side__menu">
+            <h3 class="form-side__title">ご予約内容</h3>
+            <div class="form-side__items">
+              <div class="form-side__item">
+                <div class="form-side__wrap">
+                  <div class="form-side__info">
+                    <p>
+                      <span>車種</span>アルファード
+                    <p>
+                      <span>出発日時</span>2023/10/10  10:00
+                    </p>
+                    <p>
+                      <span>返却日時</span>2023/10/11  10:00
+                    </p>
+                  </div>
+                  <div class="form-side__box">
+                      <div class="form-side__image">
+                        <img src="./images/form/alphard.jpg" alt="alphard">
+                      </div>
+                      <a href="" class="form-side__link">日時・車種を変更する</a>
+                  </div>
+                </div>
+              </div>
+              <div class="form-side__item">
+                <div class="form-side__price">
+                  <div class="price">
+                    <span>レンタル料金</span>
+                   <p><span>6時間</span><span>6,000円</span></p>
+                  </div>
+                  <div class="price">
+                    <span>チャイルドシート</span>
+                   <p><span>ベビーシートA (1)</span><span>2,000円</span></p>
+                   <p><span>チャイルドシートB (2)</span><span>2,000円</span></p>
+                  </div>
+                  <div class="price">
+                    <span>保険</span>
+                   <p><span>商品A</span><span>3,000円</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-side__item">
+                <div class="form-side__price">
+                  <div class="price">
+                   <p><span>合計</span><span>13,000円</span></p>
+                  </div>
+                </div>
+                <!-- <a href="" class="btn">お客様情報入力へ進む</a> -->
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__inner">
+        <div class="footer__content">
+          <div class="footer__logo">
+            <picture>
+              <source srcset="./images/common/logo-white.png" media="(min-width:768px)"/>
+              <img src="./images/common/logo-white-sp.png" alt="logo">
+            </picture>
+          </div>
+          <ul class="footer__nav">
+            <li><a href="">営業所のご案内</a></li>
+            <li><a href="">ご利用ガイド</a></li>
+            <li><a href="">保険制度</a></li>
+            <li><a href="">Q&A</a></li>
+            <li><a href="">ご予約</a></li>
+          </ul>
+        </div>
+        <p class="footer__copy">Copyright@XXXXXXXX All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- <h2 class="section-title">車種・料金
+    <img src="./images/common/section-title_back.jpg" alt="木目柄">
+  </h2> -->
+</body>
+</html>
